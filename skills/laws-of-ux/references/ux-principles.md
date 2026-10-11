@@ -1,30 +1,47 @@
-# Laws of UI: practical lenses
+# Laws of UX: practical lenses
 
-The [Laws of UI collection](https://uilaws.com/) presents the principles below as ways to reason about interface perception and interaction. These notes paraphrase that collection and turn each item into a review prompt. A named law is a heuristic, not proof that a design works or a requirement every page must satisfy.
+These short notes paraphrase the current [Laws of UX collection](https://lawsofux.com/laws/), checked on 2026-10-11. Use a principle to explain a plausible mechanism behind an observed problem or design choice. A principle alone does not establish that a particular interface is good or bad.
 
-## Visual structure
+## Decisions, effort, and memory
 
-- **Symmetry:** balanced arrangements can feel unified. Use symmetry to support order, and break it when the task needs stronger hierarchy or direction.
-- **Rule of thirds:** a 3-by-3 composition can help place focal content. Treat it as a layout prompt, not a grid every page must follow.
-- **White space:** spacing can improve focus and readability. Use it to clarify grouping; too much or poorly placed space can disconnect related content.
-- **Color theory:** color combinations carry visual and cultural associations. Check the product context and never use color as the only signal for meaning.
-- **Typography hierarchy:** differences in type size and style can show importance and reading order. Keep levels consistent and readable.
-- **Contrast:** visual difference can draw attention and separate elements. Reserve strong emphasis for meaningful priority; verify text and control contrast against WCAG rather than judging by appearance alone.
-- **Consistency:** repeated patterns help users recognize how similar elements work. Keep equivalent controls and states consistent unless a meaningful difference needs to be visible.
+- **Hick's Law** — More or more complex choices can increase decision time. Useful for examining choice sets and decision points. Do not remove meaningful options without understanding the task. [Source](https://lawsofux.com/hicks-law/)
+- **Choice Overload** — A large set can feel difficult to evaluate. Check how options are named, grouped, filtered, and compared; do not assume a fixed maximum number.
+- **Cognitive Load** — Interfaces consume mental effort. Reduce effort that does not help the task, while keeping necessary information available.
+- **Chunking** — Group related information into meaningful units. Groups should reflect the task and content, not arbitrary visual decoration.
+- **Miller's Law / Working Memory** — Users must hold some information in mind while acting. Support recognition, comparison, and external memory. Do not use “7 ± 2” as a universal cap on navigation items or options; the Laws of UX page itself cautions against the “magical number seven” and notes context and individual differences. [Source](https://lawsofux.com/millers-law/)
+- **Serial Position Effect** — First and last items may be more memorable. Consider placement for important choices, but do not rely on position as the only signal.
+- **Selective Attention** — People focus on stimuli relevant to their goals. Keep task-critical information visible and avoid competing emphasis.
 
-## Grouping and perception
+## Interaction and learnability
 
-- **Proximity:** nearby elements are often perceived as related. Align spacing with the actual relationship between labels, inputs, actions, and content.
-- **Closure:** people can perceive a complete shape from partial visual information. Do not let decorative incompleteness make controls or status unclear.
-- **Continuity:** aligned elements can appear connected or follow a path. Use alignment to support reading and sequence without implying a false relationship.
+- **Fitts's Law** — A target is easier to acquire when it is larger and closer to the current point of interaction. Inspect size, spacing, and placement, especially for touch. Use WCAG or platform guidance for formal target-size requirements. [Source](https://lawsofux.com/fittss-law/)
+- **Jakob's Law / Mental Models** — Familiar patterns can reduce learning effort because people bring expectations from other products. Preserve conventions when they fit; do not copy a pattern that conflicts with the user's task or product model.
+- **Paradox of the Active User** — People often begin acting before reading instructions. Make the next step legible in context and make errors recoverable.
+- **Postel's Law** — The collection presents a principle about accepting and sending information. For UX, prioritize clear, forgiving input and clear output; never use this as a reason to accept unsafe, invalid, or ambiguous data silently.
+- **Tesler's Law** — Some complexity is inherent in a task. Decide where it belongs; do not simply transfer it to users or hide it from them.
 
-## Choices and interaction
+## Perception and visual structure
 
-- **Fitts's Law:** larger and closer targets are generally easier to acquire. Inspect size, spacing, and placement, especially for frequent or touch-operated controls; use WCAG for formal target-size claims.
-- **Hick's Law:** more numerous or complex choices can take longer to decide among. Make options understandable and meaningfully grouped; do not hide useful choices just to reduce their count.
-- **Jakob's Law:** familiar conventions can reduce the effort of learning an interface. Follow patterns that fit the audience and task, while preserving the product's own mental model where it differs for a reason.
+- **Proximity, Common Region, Similarity, and Uniform Connectedness** — Spacing, boundaries, visual similarity, and connecting cues shape which elements people perceive as related. Make visual grouping match functional relationships.
+- **Prägnanz** — People tend to perceive a simpler organization in ambiguous forms. Prefer clear structure, but do not remove detail users need to distinguish options.
+- **Aesthetic-Usability Effect** — Visual appeal can influence perceived usability. Treat polish as valuable, but inspect task performance separately; attractive design can mask usability problems. [Source](https://lawsofux.com/aesthetic-usability-effect/)
+- **Von Restorff Effect** — A distinct item can stand out among similar items. Reserve contrast for meaningful priority; too many standout items compete.
 
-## Sources
+## Progress, timing, and remembered experience
 
-- [Laws of UI](https://uilaws.com/) — primary source for this skill's named visual and interaction principles.
-- [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/) — normative accessibility requirements; see [accessibility-checks.md](accessibility-checks.md) for relevant checks.
+- **Doherty Threshold / Flow** — Delays and interruptions affect momentum. Give timely feedback and useful progress states; the site's cited timing threshold is a heuristic, not a universal performance budget. [Source](https://lawsofux.com/doherty-threshold/)
+- **Goal-Gradient Effect / Zeigarnik Effect** — Visible progress and unfinished steps can shape motivation and recall. Use progress indicators only when they reflect real progress, and make it clear how to pause or resume.
+- **Peak-End Rule** — People may remember especially salient moments and the ending. Inspect the most consequential moment and task completion, not just the average screen.
+- **Pareto Principle / Occam's Razor** — These can prompt focus on high-impact causes and simpler explanations. They are broad reasoning heuristics, not a formula for deciding which UX issues affect most users.
+
+## Accessibility is a separate standard
+
+Use the current [W3C WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/) for testable web accessibility requirements. Laws of UX are not accessibility criteria and do not establish WCAG conformance. State the specific criterion and evidence when reporting a conformance issue.
+
+## Sources and currency
+
+- [Laws of UX — collection](https://lawsofux.com/laws/)
+- [Laws of UX — book](https://lawsofux.com/book/)
+- [W3C — WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+
+The live Laws of UX pages may change. Revisit the relevant source when a task depends on exact wording, a disputed claim, or the latest site content; otherwise keep these paraphrased notes as quick guidance.
